@@ -72,7 +72,9 @@ ADD PRIMARY KEY (`Invoice ID`);
 select product_line,sum(quantity) as total_sell from supermarket_sales group by product_line order by total_sell desc;
 ```
 Result:
+
 ![image](https://github.com/AhamedSahil/Project-1/assets/164605797/e384bbc0-b2f7-4d59-9dd6-52f8665bf8aa)
+
 - finding the most profitable product with respect to product_line and top profitable product
 ```mysql
 select product_line,sum(gross_income) as total_profit from supermarket_sales group by product_line order by total_profit desc;#top profitable product is food and beverages.
