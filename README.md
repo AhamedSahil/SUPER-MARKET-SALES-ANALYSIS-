@@ -1,18 +1,16 @@
-### SUPER MARKET SALES ANALYSIS!
+# <p align="center">SUPER MARKET SALES ANALYSIS!</p>
+# <p align="center">![image](https://github.com/AhamedSahil/Project-1/assets/164605797/25231f93-6fdf-40c6-a2c0-3d49cdcb7241)</p>
 
-**INTRODUCTION:-**
+This repository contains code and resources for analyzing sales data from a supermarket. The analysis is performed using Sql on  mysqlworkbech and Excel. The purpose of this project is to gain insights into sales trends, customer behavior.
 
-**1.** Data set used is a supermarket sales data collected from Kaggle.
+**Tools:-** Excel,Mysql
 
-**2.** Supermarket data analysis involves examining sales patterns,revenue trends, and product performance. This can help identify top selling products, high-demand periods, and seasonal variations.
+[Datasets Used](https://www.kaggle.com/datasets/aungpyaeap/supermarket-sales)
+[SQL Analysis (Code)] 
 
-**OBJECTIVE OF THE STUDY:-**
 
-**1)** To visualize how explanatory variable i.e., Branch, Customer type, Gender, Product line and Payment type affect to study variable sales. 
 
-**2)** To check Main and Interaction effect of explanatory Variable on sales. 
 
-**3)** Fitting appropriate Time Series Model and analyzing study variable sales.
 
 
 
