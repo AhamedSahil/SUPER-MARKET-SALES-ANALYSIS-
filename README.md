@@ -6,7 +6,12 @@ This repository contains code and resources for analyzing sales data from a supe
 **Tools:-** Excel,Mysql
 
 [Datasets Used](https://www.kaggle.com/datasets/aungpyaeap/supermarket-sales)
-[SQL Analysis (Code)] 
+
+[SQL Analysis (Code)](supermarket_sales_projects.sql)
+
+[Ppt presentation](sql_prjct.pptx)
+
+
 
 
 
