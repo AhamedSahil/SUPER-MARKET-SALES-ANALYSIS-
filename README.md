@@ -90,6 +90,8 @@ Result:
 ```mysql
 select _month,product_line,sum(total_sales) over(partition by product_line order by _month ) as profit_data from (select extract(month from _date) as _month,product_line,sum(gross_income) total_sales from supermarket_sales  Group by _month,product_line order by total_sales ) as data_;
 ```
+Result:
+
 ![image](https://github.com/AhamedSahil/SUPER-MARKET-SALES-ANALYSIS-/assets/164605797/5b3e1101-c907-40c7-a0d7-f58b0f001f99)
 
 - Finding the avg profit  with respective to proudctline
@@ -97,19 +99,28 @@ select _month,product_line,sum(total_sales) over(partition by product_line order
 ```mysql
 select product_line, avg(gross_income) as Avg_profit from supermarket_sales group by product_line;
 ```
+Result:
+
 ![image](https://github.com/AhamedSahil/SUPER-MARKET-SALES-ANALYSIS-/assets/164605797/bbf6881f-c2a5-4f49-a16d-315308a65908)
 
 - Finding out sum of quantity by respictive City and branch irrespictive to productline
 ```mysql
 select City,branch,sum(quantity) from supermarket_sales group by city,branch;
 ```
+Result:
+
 ![image](https://github.com/AhamedSahil/SUPER-MARKET-SALES-ANALYSIS-/assets/164605797/d68166ca-0b7d-4cac-9a1c-717e84d770ea)
 
 - Finding out the top most ratings with respect to Sentiment
 ```mysql
 select sentiment,count(sentiment) as total_sentiment  from supermarket_sales group by sentiment order by total_sentiment desc;
 ```
+Result:
+
 ![image](https://github.com/AhamedSahil/SUPER-MARKET-SALES-ANALYSIS-/assets/164605797/9f4471cc-e748-4f2b-ac11-6a9b929ab190)
+
+![image](https://github.com/AhamedSahil/SUPER-MARKET-SALES-ANALYSIS-/assets/164605797/205e1dfe-d1be-4813-b017-d0993a5d1ca5)
+
 
 - Finding out the Top 5  very good rating products
 ```mysql
@@ -119,6 +130,7 @@ GROUP BY city,product_line,sentiment
 ORDER BY top_rating DESC
 LIMIT 5;
 ```
+Result:
 
 ![image](https://github.com/AhamedSahil/SUPER-MARKET-SALES-ANALYSIS-/assets/164605797/f552bb87-2e07-4594-a9e4-0c508caa9ea7)
 
