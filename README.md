@@ -74,12 +74,42 @@ select product_line,sum(quantity) as total_sell from supermarket_sales group by 
 Result:
 
 ![image](https://github.com/AhamedSahil/Project-1/assets/164605797/e384bbc0-b2f7-4d59-9dd6-52f8665bf8aa)
+### <p align="center">Top Selling Product!</p>
+![image](https://github.com/AhamedSahil/SUPER-MARKET-SALES-ANALYSIS-/assets/164605797/af14b34c-50cf-46e1-9bbc-204555840a89)
 
-- finding the most profitable product with respect to product_line and top profitable product
+
+- finding the most profitable productline.
 ```mysql
 select product_line,sum(gross_income) as total_profit from supermarket_sales group by product_line order by total_profit desc;#top profitable product is food and beverages.
 ```
 Result:
+
+![image](https://github.com/AhamedSahil/SUPER-MARKET-SALES-ANALYSIS-/assets/164605797/25cac7de-aef9-4cc8-9a27-34c2834ef034)
+
+- finding out the change in sells by their month respective to proudctline
+```mysql
+select _month,product_line,sum(total_sales) over(partition by product_line order by _month ) as profit_data from (select extract(month from _date) as _month,product_line,sum(gross_income) total_sales from supermarket_sales  Group by _month,product_line order by total_sales ) as data_;
+```
+![image](https://github.com/AhamedSahil/SUPER-MARKET-SALES-ANALYSIS-/assets/164605797/5b3e1101-c907-40c7-a0d7-f58b0f001f99)
+
+- Finding the avg profit  with respective to proudctline
+
+```mysql
+select product_line, avg(gross_income) as Avg_profit from supermarket_sales group by product_line;
+```
+![image](https://github.com/AhamedSahil/SUPER-MARKET-SALES-ANALYSIS-/assets/164605797/bbf6881f-c2a5-4f49-a16d-315308a65908)
+
+- Finding out sum of quantity by respictive City and branch irrespictive to productline
+```mysql
+select City,branch,sum(quantity) from supermarket_sales group by city,branch;
+```
+![image](https://github.com/AhamedSahil/SUPER-MARKET-SALES-ANALYSIS-/assets/164605797/d68166ca-0b7d-4cac-9a1c-717e84d770ea)
+
+
+
+
+
+
 
 
 
