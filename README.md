@@ -105,9 +105,22 @@ select City,branch,sum(quantity) from supermarket_sales group by city,branch;
 ```
 ![image](https://github.com/AhamedSahil/SUPER-MARKET-SALES-ANALYSIS-/assets/164605797/d68166ca-0b7d-4cac-9a1c-717e84d770ea)
 
+- Finding out the top most ratings with respect to Sentiment
+```mysql
+select sentiment,count(sentiment) as total_sentiment  from supermarket_sales group by sentiment order by total_sentiment desc;
+```
+![image](https://github.com/AhamedSahil/SUPER-MARKET-SALES-ANALYSIS-/assets/164605797/9f4471cc-e748-4f2b-ac11-6a9b929ab190)
 
+- Finding out the Top 5  very good rating products
+```mysql
+SELECT city,product_line,sentiment, MAX(rating) AS top_rating
+FROM supermarket_sales
+GROUP BY city,product_line,sentiment
+ORDER BY top_rating DESC
+LIMIT 5;
+```
 
-
+![image](https://github.com/AhamedSahil/SUPER-MARKET-SALES-ANALYSIS-/assets/164605797/f552bb87-2e07-4594-a9e4-0c508caa9ea7)
 
 
 
